@@ -13,6 +13,6 @@ print("Last digit of {:d} is ".format(number), end="")
 if last_digit > 5:
     print("{:d} and is greater than 5".format(last_digit))
 elif last_digit == 0:
-    print("{:d} and is 0".format(last-digit))
+    print("{:d} and is 0".format(last_digit))
 else:
     print("{:d} and is less than 6 and not 0".format(last_digit))

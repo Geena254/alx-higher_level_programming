@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     if tuple_a is None or len(tuple_a) < 2:
         if tuple_a is None:

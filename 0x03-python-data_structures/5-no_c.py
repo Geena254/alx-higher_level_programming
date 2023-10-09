@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 def no_c(my_string):
     if not my_string:  # Check if the input string is empty
         return my_string  # Return the empty string as-is

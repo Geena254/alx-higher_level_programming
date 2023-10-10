@@ -8,5 +8,5 @@ def magic_calculation(a, b):
         for i in range(4, 6):
             c = add(c, i)
     else:
-        return(sub(a, b))
+        return (sub(a, b))
     return (c)

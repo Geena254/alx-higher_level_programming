@@ -1,9 +1,9 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 
 def element_at(my_list, idx):
-    if my_list == 0:
-        return
+    if not my_list:  # Check if the list is empty
+        return None
     elif idx < 0 or idx >= len(my_list):
-        return ("None")
+        return None
     else:
         return my_list[idx]

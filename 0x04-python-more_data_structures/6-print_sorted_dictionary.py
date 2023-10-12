@@ -6,7 +6,7 @@ def print_sorted_dictionary(a_dictionary):
 
     for key in sorted_key:
         value = a_dictionary[key]
-        
+
         # Check if the value is another dictionary
         if isinstance(value, dict):
             print(f"'{key}': {{")

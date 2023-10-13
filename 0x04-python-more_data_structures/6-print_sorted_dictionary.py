@@ -9,9 +9,9 @@ def print_sorted_dictionary(a_dictionary):
 
         # Check if the value is another dictionary
         if isinstance(value, dict):
-            print(f"'{key}': {{")
+            print(f"{key}: {{")
             print_sorted_dictionary(value)
             print("}")
         else:
             # If the value is not a dictionary, print it directly
-            print(f"'{key}': {value}")
+            print(f"{key}: {value}")

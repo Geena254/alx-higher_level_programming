@@ -5,4 +5,4 @@
 
 class Square:
     """Represent a square."""
-    pass  #An empty indented block
+    pass  # An empty indented block

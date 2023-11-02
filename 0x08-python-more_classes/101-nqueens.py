@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import sys
 
 def is_safe(board, row, col):
@@ -42,4 +44,3 @@ except ValueError:
     sys.exit(1)
 
 solve_nqueens(n)
-

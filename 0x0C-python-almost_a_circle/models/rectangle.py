@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Defines a rectangle class."""
-from models.base import Base
+from base import Base
 
 
 class Rectangle:
@@ -128,14 +128,13 @@ class Rectangle:
             print(" " * self.x + self.width * '#')
 
     def __str__(self):
-         """Method that override str method
-        """
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
-            self.y, self.width,
-            self.height))
+        """Method that override str method."""
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.x, self.y, self.width, self.height)
+            )
 
     def update(self, *args, **kwargs):
-            """
+        """
         Update attributes with the provided arguments (positional and keyworded).
         """
         dict_order = ['id', 'width', 'height', 'x', 'y']
@@ -154,9 +153,9 @@ class Rectangle:
                 except KeyError:
                     pass
 
-     def to_dictionary(self):
-         """Method that returns a dictionary with
-           attributes of the object.
+    def to_dictionary(self):
+        """
+        Method that returns a dictionary with attributes of the object.
         """
         dict_order = ['x', 'y', 'id', 'height', 'width']
         dict_attrs = {}

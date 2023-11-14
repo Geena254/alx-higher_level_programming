@@ -22,12 +22,13 @@ class Rectangle:
             ValueError: If either of x or y < 0.
         """
         # call the super class with id
-        super().__init__(id)
+        super().__init__()
         # Assign each argument to the right attribute
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        self.id = id
 
     # Getter and setter for width
     @property

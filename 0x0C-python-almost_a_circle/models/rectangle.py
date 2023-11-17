@@ -38,6 +38,14 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
+        """Set the width of the Rectangle.
+
+        Args:
+            value (int): The width value to be set.
+
+        Raises:
+            ValueError: If value is not an integer or <= 0.
+        """
         if not isinstance(value, int):
             raise ValueError("width must be an integer")
         if value <= 0:
@@ -52,6 +60,14 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
+        """Set the height of the Rectangle.
+
+        Args:
+            value (int): The height value to be set.
+
+        Raises:
+            ValueError: If value is not an integer or <= 0.
+        """
         if not isinstance(value, int):
             raise ValueError("height must be an integer")
         if value <= 0:
@@ -66,6 +82,14 @@ class Rectangle:
 
     @x.setter
     def x(self, value):
+        """Set the x coordinate of the Rectangle.
+
+        Args:
+            value (int): The x coordinate value to be set.
+
+        Raises:
+            ValueError: If value is not an integer or < 0.
+        """
         if not isinstance(value, int):
             raise ValueError("x must be an integer")
         if value < 0:
@@ -80,6 +104,14 @@ class Rectangle:
 
     @y.setter
     def y(self, value):
+        """Set the y coordinate of the Rectangle.
+
+        Args:
+            value (int): The y coordinate value to be set.
+
+        Raises:
+            ValueError: If value is not an integer or < 0.
+        """
         if not isinstance(value, int):
             raise ValueError("y must be an integer")
         if value < 0:

@@ -136,17 +136,39 @@ class Rectangle(Base):
         """
         Update attributes with the provided arguments (positional and keyworded).
         """
-        if args:
-            arg_names = ['id', 'width', 'height', 'x', 'y']
-            if args is not None:
-                if len(args) < 6 and len(args) > 0:
-                    for i in range(len(args)):
-                        setattr(self, arg_names[i], args[i])
-                        return
+        if args and len(args) != 0:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.width = arg
+                elif a == 2:
+                    self.height = arg
+                elif a == 3:
+                    self.x = arg
+                elif a == 4:
+                    self.y = arg
+                a += 1
 
-        for key in kwargs:
-            if key in arg_names:
-                setattr(self, key, kwargs[key])
+        elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    if v is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = v
+                elif k == "width":
+                    self.width = v
+                elif k == "height":
+                    self.height = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
 
     # Built in functions
     def __str__(self):

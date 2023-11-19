@@ -141,11 +141,11 @@ class Rectangle(Base):
             if args is not None:
                 if len(args) < 6 and len(args) > 0:
                     for i in range(len(args)):
-                        setattr(self, atr_names[i], args[i])
+                        setattr(self, arg_names[i], args[i])
                         return
 
         for key in kwargs:
-            if key in atr_names:
+            if key in arg_names:
                 setattr(self, key, kwargs[key])
 
     # Built in functions

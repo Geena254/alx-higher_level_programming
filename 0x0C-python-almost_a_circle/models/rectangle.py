@@ -132,6 +132,22 @@ class Rectangle(Base):
             print(" "*self.x, end='')
             print('#'*self.__width)
 
+    def update(self, *args, **kwargs):
+        """
+        Update attributes with the provided arguments (positional and keyworded).
+        """
+        if args:
+            arg_names = ['id', 'width', 'height', 'x', 'y']
+            if args is not None:
+                if len(args) < 6 and len(args) > 0:
+                    for i in range(len(args)):
+                        setattr(self, atr_names[i], args[i])
+                        return
+
+        for key in kwargs:
+            if key in atr_names:
+                setattr(self, key, kwargs[key])
+
     # Built in functions
     def __str__(self):
         """

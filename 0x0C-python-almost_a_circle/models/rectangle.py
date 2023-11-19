@@ -134,7 +134,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """
-        Update attributes with the provided arguments (positional and keyworded).
+        Update attributes with provided arguments, positional and keyworded.
         """
         if args and len(args) != 0:
             a = 0

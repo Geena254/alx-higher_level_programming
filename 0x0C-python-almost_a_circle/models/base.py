@@ -86,3 +86,45 @@ class Base():
 
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Writes a list of serialized objects to a file in csv format"""
+
+        with open(f"{cls.__name__}.csv", 'w', newline='') as f:
+            writer = csv.writer(f)
+
+            for o in list_objs:
+                if cls.__name__ == "Rectangle":
+                    writer.writerow([o.id, o.width, o.height, o.x, o.y])
+                if cls.__name__ == "Square":
+                    writer.writerow([o.id, o.size, o.x, o.y])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Returns a list of instances based on a csv file"""
+        list_objs = []
+
+        with open(f"{cls.__name__}.csv", 'r', newline='') as f:
+            reader = csv.reader(f)
+            for row in reader:
+                if cls.__name__ == "Rectangle":
+                    dictionary = {
+                            "id": int(row[0]),
+                            "width": int(row[1]),
+                            "height": int(row[2]),
+                            "x": int(row[3]),
+                            "y": int(row[4])
+                            }
+
+                if cls.__name__ == "Square":
+                    dictionary = {
+                            "id": int(row[0]),
+                            "size": int(row[1]),
+                            "x": int(row[2]),
+                            "y": int(row[3])
+                            }
+
+                instance = cls.create(**dictionary)
+                list_objs.append(instance)
+        return list_objs

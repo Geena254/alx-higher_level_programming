@@ -49,3 +49,13 @@ class Square(Rectangle):
         for key in kwargs:
             if key in atr_list:
                 setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        """Returns a dictionary representation of the Square Class"""
+        res = {
+                'id': self.id,
+                'x': self.x,
+                'size': self.size,
+                'y': self.y
+                }
+        return res

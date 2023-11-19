@@ -170,6 +170,17 @@ class Rectangle(Base):
                 elif k == "y":
                     self.y = v
 
+    def to_dictionary(self):
+        """Returns the dictionary representation of Rectangle"""
+        res = {
+                'x': self.x,
+                'y': self.y,
+                'id': self.id,
+                'height': self.height,
+                'width': self.width
+                }
+        return res
+
     # Built in functions
     def __str__(self):
         """

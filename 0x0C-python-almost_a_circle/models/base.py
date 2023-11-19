@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """This module is for the first Base Class Model"""
+import json
+import csv
 
 
 class Base():
@@ -22,3 +24,12 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    # Static methods
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns the JSON string representation of list_dictionaries."""
+        if list_dictionaries is None:
+            return "[]"
+        return (json.dumps(list_dictionaries))

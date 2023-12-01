@@ -14,18 +14,30 @@ that value is equivalent to using the "+" operator.
 >>> import importlib
 >>> add_integer_module = importlib.import_module("0-add_integer")
 >>> add_integer = add_integer_module.add_integer
+
+# Example 1: Adding two integers
 >>> add_integer(1, 2)
 3
+
+# Example 3: Adding an integer and a negative value for b
 >>> add_integer(100, -2)
 98
+
+# Example 2: Adding an integer and the default value of b (98)
 >>> add_integer(2)
 100
+
+# Example 4: Adding an integer and a float, result is typecasted to int
 >>> add_integer(100.3, -2)
 98
+
+# Example 5: Passing a non-integer/non-float as the second argument
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer or float
+
+# Example 6: Passing None as the first argument
 >>> add_integer(None)
 Traceback (most recent call last):
     ...

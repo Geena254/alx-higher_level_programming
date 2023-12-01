@@ -9,7 +9,7 @@ Usage:
 *****
 
 "add_integer(...)" returns the addition of its two arguments. For numbers,
-that value is equivalent to using the "+" operator.
+	that value is equivalent to using the "+" operator.
 
 >>> import importlib
 >>> add_integer_module = importlib.import_module("0-add_integer")
@@ -35,11 +35,11 @@ that value is equivalent to using the "+" operator.
 >>> add_integer(4, "School")
 Traceback (most recent call last):
     ...
-TypeError: b must be an integer or float
+TypeError: b must be an integer
 
 # Example 6: Passing None as the first argument
 >>> add_integer(None)
 Traceback (most recent call last):
     ...
-TypeError: a must be an integer or float
+TypeError: a must be an integer
 """

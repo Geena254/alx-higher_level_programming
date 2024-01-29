@@ -5,7 +5,7 @@
 const PreSquare = require('./5-square');
 
 class Square extends PreSquare {
-  charPrint (c) {
+  charPrint (ch) {
     if (ch === undefined) {
       ch = 'X';
     }
@@ -15,7 +15,7 @@ class Square extends PreSquare {
         myVar += ch;
       }
 
-      console.log(myvar);
+      console.log(myVar);
     }
   }
 }
